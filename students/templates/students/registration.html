@@ -1,0 +1,21 @@
+{% extends 'students/base.html' %}
+
+{% block content %}
+  <h1>Student Registration</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" id="first_name" required><br><br>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" id="last_name" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required><br><br>
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" id="phone" required><br><br>
+    <label for="address_1">Address 1:</label>
+    <input type="text" name="address_1" id="address_1" required><br><br>
+    <label for="address_2">Address 2:</label>
+    <input type="text" name="address_2" id="address_2" required><br><br>
+    <button type="submit">Register</button>
+  </form>
+{% endblock %}
